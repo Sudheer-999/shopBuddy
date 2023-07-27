@@ -1,0 +1,22 @@
+.product-list {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+}
+
+.products-bg {
+  background-image: linear-gradient(#78c5f5, #2d91cf, #0c6196);
+  min-height: 100vh;
+  height: 100%;
+}
+
+.spin {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

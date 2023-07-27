@@ -1,0 +1,39 @@
+.about-logo {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .about-logo {
+    width: 600px;
+  }
+}
+
+.about-company {
+  font-family: Jost;
+  margin-top: 40px;
+  font-size: 18px;
+  color: #5c61b0;
+}
+
+.about-container {
+  padding: 20px 30px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    padding: 40px 100px;
+  }
+}
+
+.customer-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #5c61b0;
+  font-family: Jost;
+  margin-top: 30px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
