@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ProductContext from "./ProductContext";
 
 const ContextProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItemsList, setCartItemsList] = useState([]);
+  const [cartItems, setCartItems] = useState(cartItemsList.length);
 
   const addToCart = () => {
     setCartItems((prevCount) => prevCount + 1);
@@ -13,7 +14,15 @@ const ContextProvider = ({ children }) => {
   };
 
   return (
-    <ProductContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <ProductContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        setCartItemsList,
+        cartItemsList,
+        removeFromCart,
+      }}
+    >
       {children}
     </ProductContext.Provider>
   );

@@ -35,10 +35,12 @@ const NavBar = () => {
           <Link to="/about" className="link">
             <p>About</p>
           </Link>
-          <div className="cart-container">
-            <AiOutlineShoppingCart className="cart-icon" />
-            <span className="cart-items-count">{cartItems}</span>
-          </div>
+          <Link to="/cart" className="link">
+            <div className="cart-container">
+              <AiOutlineShoppingCart className="cart-icon" />
+              <span className="cart-items-count">{cartItems}</span>
+            </div>
+          </Link>
         </div>
         <HiMenu onClick={handleActive} className="menu-icon" />
       </div>
@@ -56,6 +58,9 @@ const NavBar = () => {
         </Link>
         <Link to="/about" className="link">
           <p className="sm-nav">About</p>
+        </Link>
+        <Link to="/cart" className="link">
+          <p className="sm-nav">Cart</p>
         </Link>
       </motion.div>
     </>

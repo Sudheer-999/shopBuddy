@@ -5,6 +5,7 @@ import ProductItemDetails from "./components/ProductItemDetails";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ContextProvider from "./components/ContextProvider";
 import About from "./components/About";
+import Cart from "./components/Cart";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/products" element={<ProductsList />} />
           <Route path="products/:id" element={<ProductItemDetails />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </ContextProvider>

@@ -18,7 +18,6 @@ const ProductsList = () => {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
     setProducts(data);
     setIsLoading(false);
   };
@@ -27,8 +26,8 @@ const ProductsList = () => {
       {isLoading ? (
         <div className="spin">
           <ThreeDots
-            height="80"
-            width="80"
+            height="70"
+            width="70"
             radius="9"
             color="#fff"
             ariaLabel="three-dots-loading"
