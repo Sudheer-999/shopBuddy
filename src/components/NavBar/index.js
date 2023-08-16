@@ -2,7 +2,7 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { useState, useContext } from "react";
-import { motion } from "framer-motion";
+
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import ProductContext from "../ProductContext";
 
@@ -15,6 +15,8 @@ const NavBar = () => {
     setActive(!active);
   };
 
+  const activeClass = active ? "active" : "";
+
   return (
     <>
       <div className="nav-container">
@@ -25,7 +27,7 @@ const NavBar = () => {
             className="logo-image"
           />
         </Link>
-        <div className="nav-links">
+        <div className={`nav-links ${activeClass}`}>
           <Link to="/" className="link">
             <p className="nav-item">Home</p>
           </Link>
@@ -33,7 +35,10 @@ const NavBar = () => {
             <p className="nav-item">Products</p>
           </Link>
           <Link to="/about" className="link">
-            <p>About</p>
+            <p className="nav-item">About</p>
+          </Link>
+          <Link to="/cart" className="link">
+            <p className="nav-item cart-nav">Cart</p>
           </Link>
           <Link to="/cart" className="link">
             <div className="cart-container">
@@ -44,25 +49,6 @@ const NavBar = () => {
         </div>
         <HiMenu onClick={handleActive} className="menu-icon" />
       </div>
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: active ? 1 : 0, height: active ? "auto" : 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="sm-nav-items"
-      >
-        <Link to="/" className="link">
-          <p className="sm-nav">Home</p>
-        </Link>
-        <Link to="/products" className="link">
-          <p className="sm-nav">Products</p>
-        </Link>
-        <Link to="/about" className="link">
-          <p className="sm-nav">About</p>
-        </Link>
-        <Link to="/cart" className="link">
-          <p className="sm-nav">Cart</p>
-        </Link>
-      </motion.div>
     </>
   );
 };
